@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -11,15 +12,14 @@ export default function Logo({ variant = "dark", className }: LogoProps) {
 
   return (
     <div className={cn("flex items-center gap-3", className)}>
-      <div
-        className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white"
-        style={{
-          background: "linear-gradient(135deg, var(--navy), var(--blue))",
-        }}
-        aria-hidden="true"
-      >
-        PN
-      </div>
+      <Image
+        src="/icons/pn-logo-mark.png"
+        alt="PN Construction Builders"
+        width={604}
+        height={627}
+        className="h-11 w-auto object-contain"
+        priority
+      />
       <div className="leading-tight">
         <div className={cn("text-sm font-bold tracking-wide", textColor)}>
           PN CONSTRUCTION

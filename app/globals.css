@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --navy: #0b2545;
-  --navy-light: #123b6b;
-  --blue: #2e86ff;
-  --blue-dark: #1a5fc4;
+  /* Sampled from the client's real logo (logo.jpeg, dominant non-background pixels) */
+  --navy: #002868;
+  --navy-light: #0a3f9e;
+  --blue: #0040c0;
+  --blue-dark: #002d90;
   --surface: #f7f9fc;
   --charcoal: #111827;
   --muted: #6b7280;
