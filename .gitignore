@@ -7,3 +7,4 @@ next-env.d.ts
 # Large binaries (kept on disk, not in git)
 public/hero-frames/
 public/videos/*.mp4
+.vercel
