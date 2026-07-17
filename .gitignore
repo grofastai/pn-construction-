@@ -4,7 +4,6 @@ out
 *.tsbuildinfo
 next-env.d.ts
 
-# Large binaries (kept on disk, not in git)
-public/hero-frames/
+# Large binary (kept on disk, not in git) — hero-frames/*.webp IS tracked, just the raw source video isn't
 public/videos/*.mp4
 .vercel

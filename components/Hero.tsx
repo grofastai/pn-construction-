@@ -6,7 +6,7 @@ import { prefersReducedMotion } from "@/lib/utils";
 
 const TOTAL_FRAMES = 480;
 const FRAME_PATH = "/hero-frames/frame_";
-const FRAME_EXT = ".png";
+const FRAME_EXT = ".webp";
 
 const pad = (n: number) => String(n).padStart(6, "0");
 const frameUrl = (i: number) => `${FRAME_PATH}${pad(i)}${FRAME_EXT}`;
