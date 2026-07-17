@@ -27,11 +27,12 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-            Building Homes,
-            <br />
-            Building Trust
+          <h1 className="text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
+            PN CONSTRUCTION
           </h1>
+          <p className="mt-3 text-base font-medium uppercase tracking-[0.3em] text-white/70 md:text-lg">
+            Building Homes, Building Trust
+          </p>
         </Reveal>
 
         <Reveal delay={0.2}>
