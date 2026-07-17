@@ -12,10 +12,11 @@ npm run dev
 
 ## Before going live — replace these placeholders
 
-- **Logo**: `components/Logo.tsx` currently renders a CSS/text-based lockup built from the
-  brand's blue/navy colors. Once the real logo file is available, swap it in (either as an
-  `<Image>` inside `Logo.tsx`, or replace `<Logo />` usages directly) and re-sample the exact
-  color values in `app/globals.css`'s `:root` block — current values are close approximations.
+- ~~**Logo**~~ — done. `components/Logo.tsx` uses the real logo (`public/icons/pn-logo-mark.png`,
+  background removed, cropped to just the badge mark, paired with the typeset wordmark since the
+  full lockup's tall proportions don't fit a nav bar legibly). `app/globals.css`'s `--navy`/`--blue`
+  are sampled from the real logo file, not approximations. The full uncropped logo is at
+  `public/icons/pn-logo.png` for future use (larger lockups, favicon, print).
 - **Portfolio images** (`public/images/portfolio/1.jpg`–`8.jpg`): these are unattributed
   reference/inspiration images, not PN Construction's own completed projects. Replace with real
   project photos once available. See the design spec's Asset Policy section for why two
