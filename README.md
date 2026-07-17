@@ -17,6 +17,11 @@ npm run dev
   full lockup's tall proportions don't fit a nav bar legibly). `app/globals.css`'s `--navy`/`--blue`
   are sampled from the real logo file, not approximations. The full uncropped logo is at
   `public/icons/pn-logo.png` for future use (larger lockups, favicon, print).
+- **Hero video** (`components/Hero.tsx`): the hero currently shows a navy/blue gradient. Once you
+  have a construction-in-progress video, save it to `public/videos/hero-construction.mp4` — the
+  component checks for that exact file on load (via a `HEAD` request) and switches it in
+  automatically, autoplaying muted/looped behind a dark overlay for text legibility. No code
+  changes needed. Gradient stays as-is if the file is never added.
 - **Portfolio images** (`public/images/portfolio/1.jpg`–`8.jpg`): these are unattributed
   reference/inspiration images, not PN Construction's own completed projects. Replace with real
   project photos once available. See the design spec's Asset Policy section for why two

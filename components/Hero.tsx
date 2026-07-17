@@ -1,6 +1,27 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Reveal from "./ui/Reveal";
 
+const HERO_VIDEO_SRC = "/videos/hero-construction.mp4";
+
 export default function Hero() {
+  const [videoAvailable, setVideoAvailable] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(HERO_VIDEO_SRC, { method: "HEAD" })
+      .then((res) => {
+        if (!cancelled && res.ok) setVideoAvailable(true);
+      })
+      .catch(() => {
+        /* network error — leave videoAvailable false, gradient stays */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section
       id="hero"
@@ -10,6 +31,30 @@ export default function Hero() {
       }}
       aria-label="Hero"
     >
+      {/* Background video — only rendered once a HEAD check confirms the file exists;
+          the gradient above shows on its own until then, or if the file is never added. */}
+      {videoAvailable && (
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          src={HERO_VIDEO_SRC}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Dark overlay for text legibility over the video */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(160deg, rgba(0,40,104,0.82) 0%, rgba(0,40,104,0.55) 55%, rgba(0,45,144,0.75) 100%)",
+        }}
+        aria-hidden="true"
+      />
+
       <div
         className="pointer-events-none absolute inset-0 opacity-20"
         style={{
